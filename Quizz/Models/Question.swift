@@ -39,7 +39,7 @@ struct Question {
                     Answer(title: "Не очень", animal: .cat),
                     Answer(title: "Очкую", animal: .rabbit),
                     Answer(title: "Пох", animal: .turtle),
-                    Answer(title: "Тащусь", animal: .rabbit),
+                    Answer(title: "Тащусь", animal: .dog),
                         ]
             )
         ]
@@ -75,3 +75,5 @@ enum Animal: Character {
         }
     }
 }
+
+

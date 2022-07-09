@@ -45,6 +45,14 @@ class QuestionsViewController: UIViewController {
         updateUI()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard segue.identifier == "showResult" else { return }
+            guard let destination = segue.destination as? ResultViewController else { return }
+        destination.resultArray = answersChosen
+        
+        }
+  
+
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {              // нажимаем на кнопку, срабатывает IBAction, sender принимает эту кнопку
         guard let indexButton = singleButtons.firstIndex(of: sender) else { return }   // определяем индкс по которому находится эта кнопка в массиве
         let answer = currentAnswers[indexButton]                                        //по этому инлексу извлекаем из массива ответ
@@ -96,8 +104,7 @@ private func updateUI() {
     //Показать ответы - лпределить каиегорию, выбрать соответсвующий stackView и тд
     
     showCurrentAnswers(for: currentQuestion.responseType)
-    
-    
+        
     }
     
     private func showCurrentAnswers(for type: ResponseType) {
@@ -145,6 +152,8 @@ private func updateUI() {
             return
         }
         print("ИТОГОВЫЙ МАССИВ  \(answersChosen), \(answersChosen.count) ")
+        
+      
         performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
