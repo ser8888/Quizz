@@ -10,7 +10,7 @@ struct Question {
     let responseType: ResponseType
     let answers: [Answer]
     
-    func getQuestions() -> [Question] {
+    static func getQuestions() -> [Question] {
        [
         Question(
                 title: "Какую пищу вы предпочитаете?",
@@ -21,7 +21,38 @@ struct Question {
                     Answer(title: "Морковь", animal: .rabbit),
                     Answer(title: "Кукуруза", animal: .turtle),
                         ]
+            ),
+        Question(
+                title: "Что вам нравиться больше?",
+                responseType: .multiple,
+                 answers: [
+                    Answer(title: "Плавать", animal: .dog),
+                    Answer(title: "Спать", animal: .cat),
+                    Answer(title: "Обнимашки", animal: .rabbit),
+                    Answer(title: "Есть", animal: .turtle),
+                        ]
+            ),
+        Question(
+                title: "Любите ли вы поездки на машине?",
+                responseType: .ranged,
+                 answers: [
+                    Answer(title: "Не очень", animal: .cat),
+                    Answer(title: "Очкую", animal: .rabbit),
+                    Answer(title: "Пох", animal: .turtle),
+                    Answer(title: "Тащусь", animal: .rabbit),
+                        ]
+            ),
+        Question(
+                title: "Какую пищу вы предпочитаете?",
+                 responseType: .single,
+                 answers: [
+                    Answer(title: "Стейк", animal: .dog),
+                    Answer(title: "Рыба", animal: .cat),
+                    Answer(title: "Морковь", animal: .rabbit),
+                    Answer(title: "Кукуруза", animal: .turtle),
+                        ]
             )
+        
         ]
     }
 }
