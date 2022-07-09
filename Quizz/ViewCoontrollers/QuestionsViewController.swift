@@ -144,6 +144,7 @@ private func updateUI() {
             updateUI()
             return
         }
+        print("ИТОГОВЫЙ МАССИВ  \(answersChosen), \(answersChosen.count) ")
         performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
