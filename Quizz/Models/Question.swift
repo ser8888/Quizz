@@ -41,18 +41,7 @@ struct Question {
                     Answer(title: "Пох", animal: .turtle),
                     Answer(title: "Тащусь", animal: .rabbit),
                         ]
-            ),
-        Question(
-                title: "Какую пищу вы предпочитаете?",
-                 responseType: .single,
-                 answers: [
-                    Answer(title: "Стейк", animal: .dog),
-                    Answer(title: "Рыба", animal: .cat),
-                    Answer(title: "Морковь", animal: .rabbit),
-                    Answer(title: "Кукуруза", animal: .turtle),
-                        ]
             )
-        
         ]
     }
 }
