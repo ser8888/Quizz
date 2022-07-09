@@ -23,7 +23,13 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var rangedStackView: UIStackView!
     @IBOutlet var rangedLablels: [UILabel]!
-    @IBOutlet var rangedSlider: UISlider!
+    @IBOutlet var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1 )
+            rangedSlider.maximumValue = answerCount
+            rangedSlider.value = answerCount / 2
+        }
+    }
     
     
     private let questions = Question.getQuestions()
@@ -54,6 +60,9 @@ class QuestionsViewController: UIViewController {
         nextQuestion()
     }
     @IBAction func rangedAnswerButtonPressed() {
+        let index = lrintf(rangedSlider.value)
+        answersChosen.append(currentAnswers[index])
+        nextQuestion()
     }
     
     
@@ -63,13 +72,14 @@ class QuestionsViewController: UIViewController {
 extension QuestionsViewController {
     
 private func updateUI() {
+    print("МАССИВ ОТВЕТОВ \(answersChosen)")
     // Hide  stacks
     for stackView in [singleStackView, multipleStakeView, rangedStackView] {
         stackView?.isHidden = true
         }
     // Извлекаем тккущмй вопрос из массива Question по индексу questionIndex
     let currentQuestion = questions[questionIndex]
-    print(currentQuestion)
+ //   print(currentQuestion)
     
     // Set current quesiton for question Lable
     questionLabel.text = currentQuestion.title
@@ -94,7 +104,7 @@ private func updateUI() {
         switch type {
         case .single: showSingeStackView(with: currentAnswers )
         case .multiple: showMultipleStackView(with: currentAnswers)
-        case .ranged: break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -118,8 +128,16 @@ private func updateUI() {
             label.text = answer.title
         }
     }
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden = false
+        
+        rangedLablels.first?.text = answers.first?.title
+        rangedLablels.last?.text = answers.last?.title
+    }
+    
     
     private func nextQuestion() {
+        print("NEXT QUESTION  \(answersChosen)")
         questionIndex += 1
         
         if questionIndex < questions.count {
