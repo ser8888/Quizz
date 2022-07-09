@@ -260,13 +260,7 @@
                             <constraint firstItem="re0-QX-9sQ" firstAttribute="top" secondItem="SFh-yd-TYt" secondAttribute="top" id="zmy-Cb-3C8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="GTF-Hy-Yw2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="y5j-pN-ydw">
-                            <connections>
-                                <segue destination="iZ5-ch-H9b" kind="show" id="t4r-1Z-vTm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="GTF-Hy-Yw2"/>
                     <connections>
                         <outlet property="multipleStakeView" destination="ZCv-FT-GbH" id="SBt-lY-lld"/>
                         <outlet property="questionLabel" destination="wGX-SB-c1H" id="dRX-L7-o10"/>
@@ -341,7 +335,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bdh-Gb-sL0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TMC-ok-cwt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -354,9 +348,6 @@
             <point key="canvasLocation" x="675" y="50"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eHB-ul-D6b"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
