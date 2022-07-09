@@ -58,7 +58,6 @@
 		7F8FE064287956DD00B657E2 /* Quizz */ = {
 			isa = PBXGroup;
 			children = (
-				7F8FE073287956DF00B657E2 /* Info.plist */,
 				7F8FE07928796D7400B657E2 /* ViewCoontrollers */,
 				7F8FE07B28796E1500B657E2 /* StoryBoards */,
 				7F8FE07C28796E3500B657E2 /* Models */,
@@ -80,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7F8FE067287956DD00B657E2 /* SceneDelegate.swift */,
+				7F8FE073287956DF00B657E2 /* Info.plist */,
 				7F8FE065287956DD00B657E2 /* AppDelegate.swift */,
 			);
 			path = Config;
@@ -335,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CC2755AXU3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quizz/Info.plist;
+				INFOPLIST_FILE = Quizz/Config/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -363,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CC2755AXU3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quizz/Info.plist;
+				INFOPLIST_FILE = Quizz/Config/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
