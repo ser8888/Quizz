@@ -256,6 +256,7 @@
                             <constraint firstItem="ZCv-FT-GbH" firstAttribute="leading" secondItem="SFh-yd-TYt" secondAttribute="leading" constant="16" id="g3t-yR-Cdw"/>
                             <constraint firstItem="SFh-yd-TYt" firstAttribute="trailing" secondItem="D9I-CE-kK1" secondAttribute="trailing" constant="16" id="lHV-jM-kSS"/>
                             <constraint firstItem="hZk-Lq-iUo" firstAttribute="leading" secondItem="SFh-yd-TYt" secondAttribute="leading" constant="16" id="nDf-tM-7pG"/>
+                            <constraint firstItem="9xF-1P-chv" firstAttribute="width" secondItem="lKL-FU-NzG" secondAttribute="height" multiplier="3:5" id="r2t-gt-6Kf"/>
                             <constraint firstItem="wGX-SB-c1H" firstAttribute="top" secondItem="re0-QX-9sQ" secondAttribute="bottom" constant="8" symbolic="YES" id="wl4-ak-N56"/>
                             <constraint firstItem="re0-QX-9sQ" firstAttribute="top" secondItem="SFh-yd-TYt" secondAttribute="top" id="zmy-Cb-3C8"/>
                         </constraints>
@@ -324,7 +325,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="7uh-JN-L2W">
-                        <barButtonItem key="rightBarButtonItem" title="Выйти" id="R19-UT-Vd7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Еще рах" id="R19-UT-Vd7">
+                            <connections>
+                                <action selector="exitButton:" destination="iZ5-ch-H9b" id="9kR-D7-yFR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="definitionLabel" destination="bc8-UK-yJl" id="Sb4-0Y-HUa"/>
@@ -341,7 +346,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bdh-Gb-sL0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TMC-ok-cwt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
