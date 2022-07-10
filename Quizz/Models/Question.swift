@@ -36,10 +36,10 @@ struct Question {
                 title: "Любите ли вы поездки на машине?",
                 responseType: .ranged,
                  answers: [
-                    Answer(title: "Не очень", animal: .cat),
-                    Answer(title: "Очкую", animal: .rabbit),
+                    Answer(title: "Очкую", animal: .cat),
+                    Answer(title: "Не очень", animal: .rabbit),
                     Answer(title: "Пох", animal: .turtle),
-                    Answer(title: "Тащусь", animal: .dog),
+                    Answer(title: "Очень да", animal: .dog),
                         ]
             )
         ]
@@ -59,19 +59,19 @@ struct Answer {
 enum Animal: Character {
     case dog = "🐕"
     case cat = "🐈‍⬛"
-    case rabbit = "🐆"
+    case rabbit = "🐰"
     case turtle = "🐢"
     
     var definitaion: String {
         switch self {
         case .dog:
-            return "Вам нравиться"
+            return "Вам нравиться гавкать на прохожих и обгладывать косточки"
         case .cat:
-            return "Вы себе на уме"
+            return "Вы себе на уме и не только себе и сведёте с ума кого угодно"
         case .rabbit:
-            return "Вам нравиттся все мягкое"
+            return "Вам нравится все мягкое и затяжное секс. Берегите себя)"
         case .turtle:
-            return "Ваша сила в мудрости"
+            return "Ваша сила в мудрости и в скорости , тише едешь дальше будешь."
         }
     }
 }
